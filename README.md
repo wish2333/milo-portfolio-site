@@ -92,6 +92,18 @@ npm test
 
 请勿手动修改 `.openai/hosting.json` 中的 `project_id`，否则可能创建或更新错误的站点。
 
+## 部署到 Vercel 或 Netlify
+
+本项目保留了两套互不冲突的构建方式：默认的 `npm run build` 用于 OpenAI Sites；`npm run build:vercel` 和 `npm run build:netlify` 使用标准 Next.js 输出，供对应平台调用。
+
+### Vercel
+
+在 Vercel 导入 GitHub 仓库 `wish2333/milo-portfolio-site`。仓库内的 `vercel.json` 已指定构建命令，因此无需填写 Publish Directory；Node.js 版本请选择 22。
+
+### Netlify
+
+在 Netlify 导入同一 GitHub 仓库。仓库内的 `netlify.toml` 已指定构建命令和 Node.js 版本。Build command 与 Publish directory 都保持默认/留空；Netlify 会将其识别为 Next.js 服务。
+
 ## 常用命令
 
 | 命令 | 用途 |
@@ -99,5 +111,9 @@ npm test
 | `npm run dev` | 启动本地开发服务器 |
 | `npm run build` | 生成生产构建并检查编译错误 |
 | `npm run start` | 运行已经构建好的生产版本 |
+| `npm run dev:next` | 使用标准 Next.js 本地开发服务器 |
+| `npm run build:vercel` | 生成 Vercel 使用的标准 Next.js 构建 |
+| `npm run build:netlify` | 生成 Netlify 使用的标准 Next.js 构建 |
+| `npm run start:next` | 运行标准 Next.js 的生产版本 |
 | `npm test` | 构建并运行首页渲染测试 |
 | `npm run lint` | 检查代码规范 |
