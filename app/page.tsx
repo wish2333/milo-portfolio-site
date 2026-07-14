@@ -61,7 +61,7 @@ const projects: Project[] = [
     role: "问题抽象 · 学习闭环 · AI 稳定性",
     principles: "渐进表达 / 结构校验 / 可演示降级",
     repo: "https://github.com/wish2333/Milo-isLearning",
-    preview: "https://milo-is-learning.vercel.app/",
+    preview: "https://milo-islearning.netlify.app/",
     previewLabel: "在线 Demo",
     problem: "学习者经常“看懂但讲不出”，阅读输入没有转化为自主表达。",
     decision: "以 Markdown 为唯一 MVP 输入，用递进任务降低直接开放作答的压力。",
