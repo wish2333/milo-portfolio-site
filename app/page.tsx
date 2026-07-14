@@ -194,7 +194,7 @@ export default function Home() {
             <div><div className="case-title"><h2>{active.name}</h2>{active.id === "milo-cut" && <span>Flagship case</span>}</div><p>{active.tagline}</p></div>
             <div className="case-side">
               <div className="case-meta"><p><b>角色</b> {active.role}</p><p><b>原则</b> {active.principles}</p></div>
-              <div className="case-actions"><a href={active.repo} target="_blank" rel="noreferrer">GitHub ↗</a><a className="primary-link" href={active.preview} target="_blank" rel="noreferrer">{active.previewLabel} ↗</a></div>
+              <div className="case-actions" aria-label={`${active.name} 项目链接`}><a href={active.repo} target="_blank" rel="noreferrer">项目仓库 ↗</a><a className="primary-link" href={active.preview} target="_blank" rel="noreferrer">{active.previewLabel} ↗</a></div>
             </div>
           </header>
           <Prototype id={active.id} />
