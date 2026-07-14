@@ -11,7 +11,8 @@ type Project = {
   role: string;
   principles: string;
   repo: string;
-  demo?: string;
+  preview: string;
+  previewLabel: string;
   problem: string;
   decision: string;
   solution: string;
@@ -28,6 +29,8 @@ const projects: Project[] = [
     role: "产品定义 · 交互原型 · AI 工作流",
     principles: "人在回路 / 风险可见 / 本地优先",
     repo: "https://github.com/wish2333/Milo-Cut",
+    preview: "https://github.com/wish2333/Milo-Cut/releases/latest",
+    previewLabel: "最新版本",
     problem: "剪辑人员需要反复回听素材，自动删除又会带来难以挽回的误删风险。",
     decision: "不让 AI 直接执行删除，把模型判断变成附着在字幕上的可解释建议。",
     solution: "以字幕编辑替代复杂时间轴操作，串联建议审阅、人工修改与导出前风险检查。",
@@ -42,6 +45,8 @@ const projects: Project[] = [
     role: "用户访谈 · MVP 规划 · 体验迭代",
     principles: "本地优先 / 过程反馈 / 按需扩展",
     repo: "https://github.com/wish2333/sherpanote",
+    preview: "https://github.com/wish2333/sherpanote/releases/latest",
+    previewLabel: "最新版本",
     problem: "学习资料散落在录音、OCR、转录和笔记工具之间，处理链路高度碎片化。",
     decision: "首版只验证“导入后立即转录与整理”的闭环，并优先保障本地隐私。",
     solution: "统一接入音视频、图片与文档；通过分段识别和逐段推送改善离线模型等待体验。",
@@ -56,7 +61,8 @@ const projects: Project[] = [
     role: "问题抽象 · 学习闭环 · AI 稳定性",
     principles: "渐进表达 / 结构校验 / 可演示降级",
     repo: "https://github.com/wish2333/Milo-isLearning",
-    demo: "https://milo-is-learning.vercel.app/",
+    preview: "https://milo-is-learning.vercel.app/",
+    previewLabel: "在线 Demo",
     problem: "学习者经常“看懂但讲不出”，阅读输入没有转化为自主表达。",
     decision: "以 Markdown 为唯一 MVP 输入，用递进任务降低直接开放作答的压力。",
     solution: "从选择、排序、填空逐步走向费曼讲解，并记录“蒙对”避免高估掌握度。",
@@ -71,6 +77,8 @@ const projects: Project[] = [
     role: "需求调研 · 产品架构 · 独立开发",
     principles: "降低决策负担 / 状态清晰 / 预设复用",
     repo: "https://github.com/wish2333/ff-intelligent-neo",
+    preview: "https://github.com/wish2333/ff-intelligent-neo/releases/latest",
+    previewLabel: "最新版本",
     problem: "片头片尾替换、横竖屏转换等重复任务依赖逐条操作，复杂参数又容易出错。",
     decision: "不追求最多参数，围绕高频场景组织默认策略、配置校验和任务队列。",
     solution: "用预设、实时命令预览、批处理队列与暂停/恢复/重试形成稳定交付链路。",
@@ -85,6 +93,8 @@ const projects: Project[] = [
     role: "需求规划 · 系统设计 · 核心开发",
     principles: "可复现 / 可追溯 / 可比较",
     repo: "https://github.com/wish2333/SocialSimuLLM",
+    preview: "https://github.com/wish2333/SocialSimuLLM/releases/latest",
+    previewLabel: "最新版本",
     problem: "概念原型能跑，但配置分散、实验难复现，输出也难以支持研究分析。",
     decision: "把重点从“更像人的 Agent”转向完整、稳定、可比较的实验基础设施。",
     solution: "串联配置、批量实验、结构化日志、检查点、回放与热力图分析。",
@@ -182,10 +192,13 @@ export default function Home() {
         <article className="case" key={active.id}>
           <header className="case-head">
             <div><div className="case-title"><h2>{active.name}</h2>{active.id === "milo-cut" && <span>Flagship case</span>}</div><p>{active.tagline}</p></div>
-            <div className="case-meta"><p><b>角色</b> {active.role}</p><p><b>原则</b> {active.principles}</p></div>
+            <div className="case-side">
+              <div className="case-meta"><p><b>角色</b> {active.role}</p><p><b>原则</b> {active.principles}</p></div>
+              <div className="case-actions"><a href={active.repo} target="_blank" rel="noreferrer">GitHub ↗</a><a className="primary-link" href={active.preview} target="_blank" rel="noreferrer">{active.previewLabel} ↗</a></div>
+            </div>
           </header>
           <Prototype id={active.id} />
-          <footer className="evidence"><span><b>验证说明</b> · {active.validation}</span><span className="case-links">{active.demo && <a href={active.demo} target="_blank" rel="noreferrer">在线体验 ↗</a>}<a href={active.repo} target="_blank" rel="noreferrer">查看仓库 ↗</a></span></footer>
+          <footer className="evidence"><span><b>验证说明</b><i />{active.validation}</span></footer>
         </article>
       </section>
 
