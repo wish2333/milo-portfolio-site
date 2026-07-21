@@ -24,15 +24,15 @@ const projects: Project[] = [
     id: "milo-cut",
     index: "01",
     name: "Milo-Cut",
-    type: "AI 视频工作流",
-    tagline: "面向教培与企业内训团队的本地 AI 粗剪与培训内容预处理工具",
-    role: "产品定义 · 交互原型 · AI 工作流",
+    type: "人工智能视频工作流",
+    tagline: "面向教培与企业内训团队的本地人工智能粗剪与培训内容预处理工具",
+    role: "产品定义 · 交互原型 · 人工智能工作流",
     principles: "人在回路 / 风险可见 / 本地优先",
     repo: "https://github.com/wish2333/Milo-Cut",
     preview: "https://milo-cut.netlify.app/",
     previewLabel: "在线 Demo",
     problem: "剪辑人员需要反复回听素材，自动删除又会带来难以挽回的误删风险。",
-    decision: "不让 AI 直接执行删除，把模型判断变成附着在字幕上的可解释建议。",
+    decision: "不让智能工具直接执行删除，把模型判断变成附着在字幕上的可解释建议。",
     solution: "以字幕编辑替代复杂时间轴操作，串联建议审阅、人工修改与导出前风险检查。",
     validation: "约 20 名相关从业者的需求认知与真实试用观察；数据仅用于验证工作流假设。",
   },
@@ -40,9 +40,9 @@ const projects: Project[] = [
     id: "learning",
     index: "02",
     name: "Milo-isLearning",
-    type: "AI 学习 Agent",
+    type: "人工智能学习助手",
     tagline: "把 Markdown 学习材料编译成概念学习、渐进式测验与费曼讲解路径",
-    role: "问题抽象 · 学习闭环 · AI 稳定性",
+    role: "问题抽象 · 学习闭环 · 智能能力稳定性",
     principles: "渐进表达 / 结构校验 / 可演示降级",
     repo: "https://github.com/wish2333/Milo-isLearning",
     preview: "https://milo-islearning.netlify.app/",
@@ -64,7 +64,7 @@ const projects: Project[] = [
     preview: "https://github.com/wish2333/SocialSimuLLM/releases/latest",
     previewLabel: "最新版本",
     problem: "概念原型能跑，但配置分散、实验难复现，输出也难以支持研究分析。",
-    decision: "把重点从“更像人的 Agent”转向完整、稳定、可比较的实验基础设施。",
+    decision: "把重点从“更像人的智能体”转向完整、稳定、可比较的实验基础设施。",
     solution: "串联配置、批量实验、结构化日志、检查点、回放与热力图分析。",
     validation: "累计完成上千循环轮次和约 30 个模拟日的个人实验探索，论文获优秀。",
   },
@@ -73,7 +73,7 @@ const projects: Project[] = [
     index: "04",
     name: "SherpaNote",
     type: "本地知识工作台",
-    tagline: "将录音、转录、文档提取和 AI 整理整合进同一条学习资料处理路径",
+    tagline: "将录音、转录、文档提取和智能整理整合进同一条学习资料处理路径",
     role: "用户访谈 · MVP 规划 · 体验迭代",
     principles: "本地优先 / 过程反馈 / 按需扩展",
     repo: "https://github.com/wish2333/sherpanote",
@@ -113,20 +113,20 @@ function MiloCutPrototype() {
       <div className="ui-tabs"><b>字幕精修</b><span>画面编排</span><span>素材</span><span>音频</span><small>● 已保存到本地</small></div>
       <div className="cut-editor">
         <section className="video-pane">
-          <div className="video-screen"><span>MODULE 02 · 风险识别</span><b>进入作业区域前，先完成环境风险确认</b><small>进入作业区域前，先确认安全标识。</small></div>
+          <div className="video-screen"><span>模块 02 · 风险识别</span><b>进入作业区域前，先完成环境风险确认</b><small>进入作业区域前，先确认安全标识。</small></div>
           <div className="player">▶ <b>00:42.18</b><span>/ 03:18.05</span></div>
-          <p><strong>当前任务</strong>让 AI 提效，但不替用户做高风险决定。建议逐条确认后才写回时间线。</p>
+          <p><strong>当前任务</strong>让智能工具提效，但不替用户做高风险决定。建议逐条确认后才写回时间线。</p>
         </section>
         <section className="transcript-pane">
           <header><b>字幕与文稿</b><span>24 条 · 2 条待确认</span></header>
           <div className="transcript-row"><time>00:35</time><p>本节将介绍进入作业区域前的准备工作。</p><small>99%</small></div>
-          <div className="transcript-row active"><time>00:42</time><p>进入作业区域前，先<del>检查一下周围</del><ins>确认安全标识与环境风险。</ins></p><small>AI</small></div>
+          <div className="transcript-row active"><time>00:42</time><p>进入作业区域前，先<del>检查一下周围</del><ins>确认安全标识与环境风险。</ins></p><small>建议</small></div>
           <div className="transcript-row"><time>00:48</time><p>如发现设备异常，请立即停止操作并上报。</p><small>98%</small></div>
           <div className="transcript-row"><time>00:55</time><p>请勿在未授权的情况下拆卸防护装置。</p><small>96%</small></div>
           <div className="transcript-row"><time>01:03</time><p>确认防护用品佩戴完整后，再开始工作。</p><small>97%</small></div>
         </section>
         <aside className="ai-review">
-          <header><b>AI 建议审阅</b><span>1 / 2</span></header>
+          <header><b>智能建议审阅</b><span>1 / 2</span></header>
           <div className="suggestion"><div><b>措辞优化</b><small>需人工确认</small></div><p>建议改为“确认安全标识与环境风险”，表达更明确，也与术语表一致。</p><blockquote>依据：企业术语表 v3<br />参考：风险识别规范</blockquote><footer><button>保留原文</button><button className="primary">接受建议</button></footer></div>
           <div className="suggestion compact"><div><b>断句调整</b><small>低风险</small></div><p>在 00:55.12 处拆分字幕。</p></div>
         </aside>
@@ -138,20 +138,27 @@ function MiloCutPrototype() {
 }
 
 function SherpaPrototype() {
-  return <div className="product-ui simple-ui"><div className="simple-head"><span>资料库 / 课程研究</span><button className="primary">＋ 导入资料</button></div><div className="source-grid"><aside><b>本次任务</b><h3>生成《平台治理》课程笔记</h3><span>4 个来源 · 本地处理</span><ol><li className="done">录音转录</li><li className="done">文档解析</li><li className="active">AI 整理</li><li>保存笔记</li></ol></aside><main><header><b>逐段转录</b><span>38:21 / 52:08</span></header><div className="wave"><i /><i /><i /><i /><i /><i /><i /></div><article><small>正在整理 · 第 7 段</small><h4>技术采纳不仅由工具能力决定</h4><p>组织环境、学习成本与同伴网络共同影响使用意愿。已关联 3 处原文证据。</p></article></main><section><b>笔记结构</b><ul><li>01 核心概念</li><li className="active">02 影响因素</li><li>03 案例与证据</li><li>04 待验证问题</li></ul></section></div></div>;
+  return <div className="product-ui simple-ui"><div className="simple-head"><span>资料库 / 课程研究</span><button className="primary">＋ 导入资料</button></div><div className="source-grid"><aside><b>本次任务</b><h3>生成《平台治理》课程笔记</h3><span>4 个来源 · 本地处理</span><ol><li className="done">录音转录</li><li className="done">文档解析</li><li className="active">智能整理</li><li>保存笔记</li></ol></aside><main><header><b>逐段转录</b><span>38:21 / 52:08</span></header><div className="wave"><i /><i /><i /><i /><i /><i /><i /></div><article><small>正在整理 · 第 7 段</small><h4>技术采纳不仅由工具能力决定</h4><p>组织环境、学习成本与同伴网络共同影响使用意愿。已关联 3 处原文证据。</p></article></main><section><b>笔记结构</b><ul><li>01 核心概念</li><li className="active">02 影响因素</li><li>03 案例与证据</li><li>04 待验证问题</li></ul></section></div></div>;
 }
 
 function LearningPrototype() {
-  return <div className="product-ui simple-ui learning-ui"><div className="simple-head"><span>Milo-isLearning / 知识编译器</span><button className="primary">开始学习</button></div><div className="learning-grid"><aside><small>当前材料</small><h3>检索增强生成<br />RAG 基础</h3><p>12 个概念 · 4 组挑战</p><div className="progress"><i /></div><b>掌握进度 42%</b></aside><main><small>渐进式挑战 · 03 / 05</small><h2>请把 RAG 的工作流程按正确顺序排列</h2><div className="sort-card">A · 生成答案</div><div className="sort-card active">B · 检索相关内容</div><div className="sort-card">C · 向量化并建立索引</div><div className="sort-card">D · 组合上下文</div></main><section><small>为什么这样设计</small><h4>先降低表达压力，再走向费曼讲解</h4><p>选择与排序用于建立结构，填空检验关键关系，最终要求学习者用自己的语言解释。</p><label>下一步</label><b>开放表达 · 费曼讲解</b></section></div></div>;
+  return <div className="product-ui simple-ui learning-ui"><div className="simple-head"><span>Milo-isLearning / 知识编译器</span><button className="primary">开始学习</button></div><div className="learning-grid"><aside><small>当前材料</small><h3>检索增强生成<br />基础</h3><p>12 个概念 · 4 组挑战</p><div className="progress"><i /></div><b>掌握进度 42%</b></aside><main><small>渐进式挑战 · 03 / 05</small><h2>请把检索增强生成的工作流程按正确顺序排列</h2><div className="sort-card">A · 生成答案</div><div className="sort-card active">B · 检索相关内容</div><div className="sort-card">C · 向量化并建立索引</div><div className="sort-card">D · 组合上下文</div></main><section><small>为什么这样设计</small><h4>先降低表达压力，再走向费曼讲解</h4><p>选择与排序用于建立结构，填空检验关键关系，最终要求学习者用自己的语言解释。</p><label>下一步</label><b>开放表达 · 费曼讲解</b></section></div></div>;
 }
 
 function QueuePrototype() {
-  return <div className="product-ui simple-ui queue-ui"><div className="simple-head"><span>FF Intelligent Neo / 批处理队列</span><button className="primary">开始全部任务</button></div><div className="queue-grid"><aside><small>当前预设</small><h3>竖屏课程视频<br />标准化处理</h3><dl><dt>画面</dt><dd>1080 × 1920</dd><dt>编码</dt><dd>H.264 / 自动</dd><dt>片头</dt><dd>brand-intro.mp4</dd></dl><button>检查配置</button></aside><main><header><b>任务队列</b><span>12 个文件 · 3 个完成</span></header>{["lesson-01.mp4","lesson-02.mp4","lesson-03.mov","lesson-04.mp4"].map((file,i)=><div className="job" key={file}><span>{i+1}</span><p><b>{file}</b><small>{i<2?"处理中 · 正在转码":"等待中 · 配置已校验"}</small></p><div className="job-progress"><i style={{width:i===0?"86%":i===1?"42%":"0%"}} /></div><em>{i===0?"86%":i===1?"42%":"—"}</em></div>)}</main><section><small>运行状态</small><h4>统一进度、日志与错误恢复</h4><p>复杂参数被收敛到可复用预设，异常任务可单独重试，不阻塞整个队列。</p><b className="state-ok">● 少量值守</b></section></div></div>;
+  return <div className="product-ui simple-ui queue-ui"><div className="simple-head"><span>FF Intelligent Neo / 批处理队列</span><button className="primary">开始全部任务</button></div><div className="queue-grid"><aside><small>当前预设</small><h3>竖屏课程视频<br />标准化处理</h3><dl><dt>画面</dt><dd>1080 × 1920</dd><dt>编码</dt><dd>H.264 / 自动</dd><dt>片头</dt><dd>课程片头.mp4</dd></dl><button>检查配置</button></aside><main><header><b>任务队列</b><span>12 个文件 · 3 个完成</span></header>{["课程-01.mp4","课程-02.mp4","课程-03.mov","课程-04.mp4"].map((file,i)=><div className="job" key={file}><span>{i+1}</span><p><b>{file}</b><small>{i<2?"处理中 · 正在转码":"等待中 · 配置已校验"}</small></p><div className="job-progress"><i style={{width:i===0?"86%":i===1?"42%":"0%"}} /></div><em>{i===0?"86%":i===1?"42%":"—"}</em></div>)}</main><section><small>运行状态</small><h4>统一进度、日志与错误恢复</h4><p>复杂参数被收敛到可复用预设，异常任务可单独重试，不阻塞整个队列。</p><b className="state-ok">● 少量值守</b></section></div></div>;
 }
 
 function SimulationPrototype() {
+  return <div className="product-ui simple-ui sim-ui"><div className="simple-head"><span>SocialSimuLLM / 实验控制台</span><button className="primary">运行实验</button></div><div className="sim-grid"><aside><small>实验配置</small><h3>校园创新扩散<br />批次 06</h3><dl><dt>智能体</dt><dd>24</dd><dt>随机种子</dt><dd>202603</dd><dt>模拟周期</dt><dd>6 天</dd></dl><span className="state-ok">● 检查点已启用</span></aside><main><header><b>事件回放 · 第 04 天</b><span>14:20</span></header><div className="map-grid">{Array.from({length:35},(_,i)=><i key={i} className={[4,9,12,18,23,30].includes(i)?"agent active":"agent"} />)}<div className="event-card"><small>邻近对话</small><b>智能体 07 → 智能体 12</b><span>“我在实验室试用了新工具……”</span></div></div></main><section><small>结构化记录</small><h4>让长任务可追溯、可比较</h4><ul><li>计划与行动日志</li><li>记忆检索依据</li><li>模型输出与回退</li><li>检查点恢复</li></ul></section></div></div>;
+}
+
+/*
+保留旧原型实现，便于后续回溯视觉差异；当前页面不调用它。
+function LegacySimulationPrototype() {
   return <div className="product-ui simple-ui sim-ui"><div className="simple-head"><span>SocialSimuLLM / 实验控制台</span><button className="primary">运行实验</button></div><div className="sim-grid"><aside><small>实验配置</small><h3>校园创新扩散<br />Batch 06</h3><dl><dt>智能体</dt><dd>24</dd><dt>随机种子</dt><dd>202603</dd><dt>模拟周期</dt><dd>6 days</dd></dl><span className="state-ok">● 检查点已启用</span></aside><main><header><b>事件回放 · Day 04</b><span>14:20</span></header><div className="map-grid">{Array.from({length:35},(_,i)=><i key={i} className={[4,9,12,18,23,30].includes(i)?"agent active":"agent"} />)}<div className="event-card"><small>邻近对话</small><b>Agent 07 → Agent 12</b><span>“我在实验室试用了新工具……”</span></div></div></main><section><small>结构化记录</small><h4>让长任务可追溯、可比较</h4><ul><li>计划与行动日志</li><li>记忆检索依据</li><li>模型输出与回退</li><li>检查点恢复</li></ul></section></div></div>;
 }
+*/
 
 function Prototype({ id }: { id: string }) {
   if (id === "sherpanote") return <SherpaPrototype />;
@@ -189,22 +196,41 @@ export default function Home() {
   return (
     <main>
       <header className="masthead shell">
-        <a className="brand" href="#top">Milo <small>AI Product Manager</small></a>
-        <nav aria-label="主要导航"><a href="#work">项目</a><a href="#thinking">产品思考</a><a href="https://github.com/wish2333" target="_blank" rel="noreferrer">GitHub</a></nav>
-        <a className="github" href="https://github.com/wish2333" target="_blank" rel="noreferrer"><i /> github.com/wish2333 ↗</a>
+        <a className="brand" href="#top">Milo <small>人工智能产品经理</small></a>
+        <nav aria-label="主要导航"><a href="#work">项目</a><a href="#thinking">产品思考</a><a href="https://github.com/wish2333" target="_blank" rel="noreferrer">代码主页</a></nav>
+        <div className="masthead-actions">
+          <a className="about-link" href="/about">个人主页 ↗</a>
+          <a className="github" href="https://github.com/wish2333" target="_blank" rel="noreferrer"><i /> 代码主页 ↗</a>
+        </div>
       </header>
 
-      <section className="intro shell" id="top">
-        <div><p className="eyebrow">Portfolio · 2026</p><h1>Milo<span>AI 产品经理</span></h1></div>
-        <p>把 AI 能力做成<strong>可信、可用、可验证</strong>的产品工作流。</p>
+      <section className="intro shell" id="top" aria-labelledby="hero-title">
+        <div className="intro-copy">
+          <p className="eyebrow"><span>作品集</span> / 2026</p>
+          <h1 id="hero-title"><span className="hero-name">Milo</span><span className="hero-role">人工智能产品经理</span></h1>
+          <div className="hero-rule" aria-hidden="true" />
+        </div>
+        <div className="hero-side">
+          <p className="hero-quote">把智能能力做成<strong>可信、可用、可验证</strong>的产品工作流。</p>
+        </div>
+        <svg className="hero-mark" viewBox="0 0 360 300" role="img" aria-label="由流程节点和轨道组成的抽象几何图形">
+          <circle cx="180" cy="150" r="104" />
+          <circle cx="180" cy="150" r="62" />
+          <path d="M28 202C91 128 123 79 180 79s89 49 152 123" />
+          <path d="M54 62c50 40 82 63 126 63 54 0 86-24 126-63" />
+          <circle className="hero-mark-dot" cx="180" cy="79" r="7" />
+          <circle className="hero-mark-dot" cx="54" cy="62" r="7" />
+          <circle className="hero-mark-dot" cx="306" cy="202" r="7" />
+          <text x="180" y="155" textAnchor="middle">判断 / 系统 / 证据</text>
+        </svg>
       </section>
 
-      <section className="workbench shell" id="work" aria-label="项目原型画廊">
+      <section className={`workbench shell case-${active.id}`} id="work" aria-label="项目原型画廊">
         <aside className="project-rail">
-          <div className="rail-label">Selected work / 05</div>
+          <div className="rail-label">精选项目 / 05</div>
           {projects.map((project) => (
             <button className={`project ${activeId === project.id ? "active" : ""}`} key={project.id} onClick={() => selectProject(project.id)} aria-pressed={activeId === project.id}>
-              <span className="project-index">{project.index}</span><span className="project-name">{project.name}<small>{project.type}</small></span>
+              <span className="project-index">{project.index}</span><span className="project-name">{project.name}<small>{project.type}</small></span><span className="project-arrow" aria-hidden="true">↗</span>
               {project.previewLabel === "在线 Demo" && <span className="live-dot" aria-label="提供在线 Demo" title="提供在线 Demo" />}
             </button>
           ))}
@@ -213,7 +239,7 @@ export default function Home() {
 
         <article className="case" key={active.id} aria-live="polite">
           <header className="case-head">
-            <div><div className="case-title"><h2>{active.name}</h2>{active.id === "milo-cut" && <span>Flagship case</span>}</div><p>{active.tagline}</p></div>
+            <div className="case-title-block"><div className="case-kicker"><span>{active.index} / 05</span><span>{active.type}</span></div><div className="case-title"><h2>{active.name}</h2>{active.id === "milo-cut" && <span>代表案例</span>}</div><p>{active.tagline}</p></div>
             <div className="case-side">
               <div className="case-meta"><p><b>角色</b> {active.role}</p><p><b>原则</b> {active.principles}</p></div>
               <div className="case-actions" aria-label={`${active.name} 项目链接`}>
@@ -232,24 +258,25 @@ export default function Home() {
             </div>
           </header>
           <Prototype id={active.id} />
+          <div className="case-decision" aria-live="polite"><span className="case-decision-label">产品判断 / {active.index}</span><p>“{active.decision}”</p></div>
           <footer className="evidence"><span><b>验证说明</b><i />{active.validation}</span></footer>
         </article>
       </section>
 
       <section className="thinking shell" id="thinking">
-        <header><p className="eyebrow">Product approach</p><h2>先理解决策，再设计 AI。</h2><p>我关注的不只是模型“能不能做”，而是它应该在流程中的哪个位置出现，用户如何校正它，以及产品如何留下可回看、可验证的决策证据。</p></header>
+        <header><p className="eyebrow">产品方法</p><h2>先理解决策，再设计智能产品。</h2><p>我关注的不只是模型“能不能做”，而是它应该在流程中的哪个位置出现，用户如何校正它，以及产品如何留下可回看、可验证的决策证据。</p></header>
         <div className="thinking-grid">
           {[
             ["01", "问题", active.problem],
             ["02", "判断", active.decision],
             ["03", "方案", active.solution],
             ["04", "验证", active.validation],
-          ].map(([index, title, copy]) => <article key={index}><span>{index}</span><h3>{title}</h3><p>{copy}</p></article>)}
+          ].map(([index, title, copy]) => <article className={`thinking-card thinking-card-${index}`} key={index}><span>{index}</span><h3>{title}</h3><p>{copy}</p></article>)}
         </div>
         <div className="thinking-foot"><span>当前案例：{active.name}</span><button onClick={() => document.getElementById("work")?.scrollIntoView({ behavior: "smooth" })}>返回原型 ↑</button></div>
       </section>
 
-      <footer className="site-footer shell"><div><b>Milo</b><span>AI 产品经理 · 让 AI 在真实工作流中变得可信</span></div><div><a href="https://github.com/wish2333" target="_blank" rel="noreferrer">GitHub</a><a href="#top">回到顶部 ↑</a></div></footer>
+      <footer className="site-footer shell"><div><b>Milo</b><span>人工智能产品经理 · 让智能能力在真实工作流中变得可信</span></div><div><a href="https://github.com/wish2333" target="_blank" rel="noreferrer">代码主页</a><a href="#top">回到顶部 ↑</a></div></footer>
     </main>
   );
 }
