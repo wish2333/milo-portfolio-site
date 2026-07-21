@@ -35,8 +35,9 @@ test("keeps project destinations configured", async () => {
 
   assert.match(page, /github\.com\/wish2333\/Milo-Cut/);
   assert.match(page, /github\.com\/wish2333\/sherpanote/);
-  assert.match(page, /milo-is-learning\.vercel\.app/);
+  assert.match(page, /milo-islearning\.netlify\.app/);
+  assert.match(page, /milo-cut\.netlify\.app/);
   assert.match(page, /github\.com\/wish2333\/ff-intelligent-neo/);
   assert.match(page, /github\.com\/wish2333\/SocialSimuLLM/);
-  assert.equal((page.match(/releases\/latest/g) ?? []).length, 4);
+  assert.equal((page.match(/releases\/latest/g) ?? []).length, 3);
 });

@@ -22,6 +22,7 @@ body {
   font-family: "SF Pro Display", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+section[id] { scroll-margin-top: 92px; }
 button, a { color: inherit; font: inherit; }
 button { cursor: pointer; }
 a { text-decoration: none; }
@@ -46,14 +47,16 @@ h1 span { font-size: clamp(19px, 1.8vw, 25px); font-weight: 650; letter-spacing:
 .workbench { display: grid; grid-template-columns: 230px minmax(0, 1fr); overflow: hidden; border: 1px solid #cfd2ca; border-radius: 22px; background: var(--surface); box-shadow: 0 30px 80px rgba(29,35,30,.11), 0 2px 6px rgba(29,35,30,.05); }
 .project-rail { display: flex; flex-direction: column; min-height: 0; padding: 23px 18px 18px; border-right: 1px solid var(--line); background: #efeee9; }
 .rail-label { padding: 0 10px 15px; color: #7b7f77; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-.project { display: grid; grid-template-columns: 31px 1fr; gap: 11px; align-items: center; width: 100%; min-height: 61px; padding: 8px 10px; border: 0; border-radius: 12px; color: #666b64; background: transparent; text-align: left; transition: .2s ease; }
+.project { display: grid; grid-template-columns: 31px 1fr auto; gap: 11px; align-items: center; width: 100%; min-height: 61px; padding: 8px 10px; border: 0; border-radius: 12px; color: #666b64; background: transparent; text-align: left; transition: .2s ease; }
 .project:hover { color: var(--ink); background: rgba(255,255,255,.58); }
 .project.active { color: var(--ink); background: var(--surface); box-shadow: 0 2px 8px rgba(25,32,27,.07); }
 .project-index { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #d2d5cd; border-radius: 9px; color: #7c817a; font: 700 10px/1 "Avenir Next", sans-serif; }
 .project.active .project-index { border-color: var(--forest); background: var(--forest); color: white; }
 .project-name { font-size: 15px; font-weight: 650; line-height: 1.2; }
 .project-name small { display: block; margin-top: 5px; color: #7f857d; font-size: 12px; font-weight: 500; }
+.live-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 0 3px var(--forest-soft); flex: 0 0 auto; }
 .rail-foot { margin-top: auto; padding: 16px 10px 3px; border-top: 1px solid #dcddd7; color: #6d736c; font-size: 13px; line-height: 1.58; }
+.rail-legend { display: block; margin-top: 6px; color: #8a8f88; font-size: 11px; }
 
 .case { min-width: 0; padding: 24px 24px 18px; background: #f8f7f3; animation: case-in .28s ease both; }
 @keyframes case-in { from { opacity: .3; transform: translateY(4px); } to { opacity: 1; transform: none; } }
@@ -193,10 +196,11 @@ button.primary, .primary { border-color: var(--forest) !important; background: v
   .project-rail { min-height: 0; display: flex; flex-direction: row; gap: 8px; padding: 12px; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); scroll-snap-type: x mandatory; scrollbar-width: none; }
   .project-rail::-webkit-scrollbar { display: none; }
   .rail-label, .rail-foot { display: none; }
-  .project { flex: 0 0 150px; display: flex; min-height: 58px; justify-content: flex-start; padding: 9px 11px; text-align: left; scroll-snap-align: start; }
+  .project { flex: 0 0 150px; position: relative; display: flex; min-height: 58px; justify-content: flex-start; padding: 9px 11px; text-align: left; scroll-snap-align: start; }
   .project-index { display: none; }
   .project-name { font-size: 13px; }
   .project-name small { display: block; font-size: 11px; }
+  .live-dot { position: absolute; top: 9px; right: 9px; }
   .case { padding: 18px; }
   .product-ui { height: 590px; }
   .simple-ui { height: 530px; }
