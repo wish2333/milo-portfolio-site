@@ -659,3 +659,32 @@ body::before {
   .method-note p { font-size: 25px; }
   .about-page .site-footer > div:last-child { flex-wrap: wrap; gap: 16px; }
 }
+
+/* Desktop profile metadata: keep the dense layout readable at normal viewing distance. */
+@media (min-width: 721px) {
+  .about-page .about-link,
+  .about-page .brand small,
+  .about-page .eyebrow,
+  .about-page .hero-notes,
+  .about-page .about-signal text,
+  .about-page .about-tags span,
+  .about-page .about-availability,
+  .about-page .section-label,
+  .about-page .fact-copy a,
+  .about-page .fact-stats span,
+  .about-page .fact-source,
+  .about-page .experience-period,
+  .about-page .experience-company,
+  .about-page .experience-outcome,
+  .about-page .experience-outcome span,
+  .about-page .repo-card-top,
+  .about-page .repo-label,
+  .about-page .repo-meta,
+  .about-page .method-note span { font-size: 12px; }
+
+  .about-page .about-section-head > div > p,
+  .about-page .fact-copy p,
+  .about-page .experience-main > p:last-child,
+  .about-page .repo-description,
+  .about-page .workflow-grid article p { font-size: 14px; }
+}
